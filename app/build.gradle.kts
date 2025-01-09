@@ -1,9 +1,8 @@
 plugins {
-    id("com.android.application") // Correct plugin for Android projects
-    kotlin("android") // Kotlin plugin for Android
-    kotlin("kapt") // Kotlin Annotation Processing plugin (if needed)
+    alias(libs.plugins.android.application) // Android application plugin
+    alias(libs.plugins.kotlin.android) // Kotlin Android plugin
+    id("org.jetbrains.kotlin.kapt") // Apply Kapt directly without a version
 }
-
 
 android {
     namespace = "com.example.notepadapp"
@@ -28,15 +27,15 @@ android {
     }
 
     buildFeatures {
-        compose = true // Enable Jetpack Compose
+        compose = true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.6.0"
+        kotlinCompilerExtensionVersion = "1.6.0" // Match your Compose version
     }
 
     kotlinOptions {
-        jvmTarget = "17" // Ensure compatibility
+        jvmTarget = "17"
     }
 
     kapt {
@@ -44,9 +43,9 @@ android {
     }
 }
 
-
 dependencies {
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.compose.ui:ui:1.6.0")
-    implementation("androidx.compose.material3:material3:1.1.0")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.navigation)
 }
