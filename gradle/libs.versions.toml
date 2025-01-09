@@ -11,7 +11,7 @@ activity = "1.9.3"
 constraintlayout = "2.2.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.12.0" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -20,7 +20,17 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
+compose-ui = { module = "androidx.compose.ui:ui", version = "1.6.0" }
+compose-material3 = { module = "androidx.compose.material3:material3", version = "1.1.0" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.2" }
+
+room-runtime = { module = "androidx.room:room-runtime", version = "2.5.2" }
+room-compiler = { module = "androidx.room:room-compiler", version = "2.5.2" }
+
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version = "1.9.10" }
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin = { id = "org.jetbrains.kotlin.android", version = "1.9.10" }
 
