@@ -1,7 +1,7 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
+    id("com.android.application") // Apply Android plugin
+    kotlin("android") // Apply Kotlin plugin
+    kotlin("kapt") // Apply Kotlin annotation processing plugin
 }
 
 android {
@@ -31,7 +31,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.6.0" // Ensure this matches your Compose version in the catalog
+        kotlinCompilerExtensionVersion = "1.6.0"
     }
 
     kotlinOptions {
@@ -49,7 +49,6 @@ dependencies {
     implementation(libs.compose.material3)
     implementation(libs.compose.navigation)
 
-    // Room dependencies
     implementation(libs.room.runtime)
     kapt(libs.room.compiler)
 }

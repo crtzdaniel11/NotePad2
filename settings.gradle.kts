@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NotepadApp"
+rootProject.name = "NotepadApp2"
 include(":app")

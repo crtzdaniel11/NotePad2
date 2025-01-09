@@ -31,6 +31,6 @@ kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version = "1.9.
 
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android = { id = "com.android.application", version = "8.1.1" }
 kotlin = { id = "org.jetbrains.kotlin.android", version = "1.9.10" }
 
