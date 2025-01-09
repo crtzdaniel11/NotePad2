@@ -1,8 +1,9 @@
 plugins {
-    id("com.android.application") // Apply Android plugin
-    kotlin("android") // Apply Kotlin plugin
-    kotlin("kapt") // Apply Kotlin annotation processing plugin
+    id("com.android.application") // Correct plugin for Android projects
+    kotlin("android") // Kotlin plugin for Android
+    kotlin("kapt") // Kotlin Annotation Processing plugin (if needed)
 }
+
 
 android {
     namespace = "com.example.notepadapp"
@@ -27,7 +28,7 @@ android {
     }
 
     buildFeatures {
-        compose = true
+        compose = true // Enable Jetpack Compose
     }
 
     composeOptions {
@@ -35,7 +36,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "17" // Ensure compatibility
     }
 
     kapt {
@@ -43,12 +44,9 @@ android {
     }
 }
 
-dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.compose.ui)
-    implementation(libs.compose.material3)
-    implementation(libs.compose.navigation)
 
-    implementation(libs.room.runtime)
-    kapt(libs.room.compiler)
+dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.compose.ui:ui:1.6.0")
+    implementation("androidx.compose.material3:material3:1.1.0")
 }
